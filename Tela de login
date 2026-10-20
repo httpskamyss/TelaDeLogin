@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tela de Login</title>
+<style>
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e6f4f1;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+
+  .card {
+    display: flex;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  
+  .div-esquerda {
+    flex: 1;
+    background-color: #1f8a70;
+    padding: 50px 40px;
+    display: flex;
+    align-items: center;
+    color: white;
+  }
+
+  .circle {
+    width: 24px;
+    height: 24px;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+
+  .div-esquerda h1 {
+    font-size: 26px;
+    margin: 0 0 10px 0;
+  }
+
+  .div-esquerda p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+    color: #d9f2ec;
+  }
+
+  
+  .div-direita {
+    flex: 1;
+    background-color: white;
+    padding: 50px 40px;
+  }
+
+  .div-direita h2 {
+    margin: 0 0 25px 0;
+    font-size: 22px;
+    color: #1f3a35;
+  }
+
+  label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 6px;
+    color: #1f3a35;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 18px;
+    border: 1px solid #cfe3df;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #f5faf9;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 13px;
+  }
+
+  .row a {
+    color: #1f8a70;
+    text-decoration: none;
+  }
+
+  button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background-color: #1f8a70;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #176c58;
+  }
+
+  .signup {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 13px;
+    color: #666;
+  }
+
+  .signup a {
+    color: #1f8a70;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  @media (max-width: 600px) {
+    .div-esquerda,
+    .div-direita {
+      padding: 30px 20px;
+    }
+  }
+
+</style>
+</head>
+<body>
+
+  <div class="card">
+
+    <div class="div-esquerda">
+      <div>
+        <div class="circle"></div>
+        <h1>Welcome back!</h1>
+        <p>You can sign in to access with your existing account.</p>
+      </div>
+    </div>
+
+    <div class="div-direita">
+      <h2>Sign in</h2>
+
+      <form onsubmit="return false;">
+        <label for="user">Username or email</label>
+        <input type="text" id="user" placeholder="Digite seu usuário" required>
+
+        <label for="pass">Password</label>
+        <input type="password" id="pass" placeholder="Digite sua senha" required>
+
+        <div class="row">
+          <label><input type="checkbox" checked> Remember me</label>
+          <a href="#">Forgot password?</a>
+        </div>
+
+        <button type="submit">Sign in</button>
+      </form>
+
+      <div class="signup">
+        New here? <a href="#">Create an account</a>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
